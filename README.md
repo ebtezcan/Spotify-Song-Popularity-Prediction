@@ -59,7 +59,7 @@ Aside from the models, we additionally explored different attributes within the 
 
 ### Top 5 Genres within Popular Songs
 &nbsp;
-<img src="">
+<img src="images/genre-popular.jpg">
 
 > Above bar graph shows us the most frequent genres among popular songs. Most frequently a popular song had Pop as their genre followed by Rap, Rock, Hip-Hop and Dance. These results make sense and are in-line with a survey conducted by IFPI (https://www.statista.com/chart/15763/most-popular-music-genres-worldwide/).
 
@@ -67,51 +67,46 @@ Aside from the models, we additionally explored different attributes within the 
 
 ### Top 5 Genres within Unpopular Songs
 
-<img src="">
+<img src="images/genre-unpopular.jpg">
 
 > The most frequent genres of unpopular songs can be seen above. The results make sense as these genres tend to have a more niche fanbase or are not represented in the mainstream media. 
 
 &nbsp;
-### 
+### Energy Scores of Songs by Popularity
 &nbsp;
-<img src="">
+<img src="images/energy.jpg">
 
-> 
-
-&nbsp;
-### 
-&nbsp;
-<img src="">
-
-
->
+> As we can see above, popular songs tended to be more energetic compared to unpopular songs. This makes sense since the most frequent genres we explored tend to also be energetic genres.
 
 &nbsp;
-### 
+### Danceability Scores of Songs by Popularity
 &nbsp;
-<img src="">
+<img src="images/danceability.jpg">
 
-> 
+
+> Above, it is clear that the popular songs tended to have a higher danceability score compared to unpopular songs. This follows the same trend as the energy scores where majority of the popular songs are high energy and danceable (refer to Appendix A for definition of "danceability": high tempo, high beat strength etc.)
 
 &nbsp;
+### Acousticness Scores of Songs by Popularity
+&nbsp;
+<img src="images/acousticness.jpg">
 
-Even though renovations are usually a lot of effort and stressful to many homeowners, they may help increase the property's value. To sum up, our analysis for King County, Washington showed the following:
-
-- Increasing the square footage above ground tends to increase the house's value.
-- Focusing on the grade of finishes and the quality of construction as a whole tends to pay dividends when it comes to selling the house.
-- Having a basement is the third most effective parameter in increasing a home's sale price. 
-
-
-## Recommendations
-
+> Similar to the energy and danceability scores we see that the popular songs tended to have a lower acousticness score. Since acoustic songs are usually lower energy and rarely danceable this follows the same trend we've been observing.
 
 &nbsp;
 
-&nbsp;
+In a competitive environment like the music streaming market, it is vital to retain current subscribers and add new subscribers over time. By accurately predicting which song will be popular next, companies like Spotify can leverage this information to create better playlists and find and sign exclusivity deals with established and up-and-coming artists more easily.  To sum up, our analysis of approximately 176,000 songs from 2019 showed the following:
 
+- Popular songs tend to have Pop, Rap, Rock, Hip-Hop and Dance as their genres.
+- More niche genres such as Children's Music, Comedy, Soundtracks, Classical and Jazz tend to be unpopular.
+- Generally, popular songs are higher energy, danceable, and therefore less acoustic.
+
+&nbsp;
 ## Limitations & Next Steps
 
-One of the 
+One of the major limitations we faced during this project was computing power. All training and testing of ML models were completed on a dated quad-core CPU which caused long processing times (sometimes in excess of 4 hours). Due to the limited amount of time we had, we were unable to iterate on our gridsearches and optimize our models to potentially perform better. Additionally, these hardware limitations also caused processing times of SHAP explainers to be too long, which we then excluded from our notebook as they never finished running.
+
+In the future, instead of using pre-collected data from 2019, we would like to use more current data by utilizing the Spotify API to analyze current trends and build models.
 
 &nbsp;
 ## For More Information
