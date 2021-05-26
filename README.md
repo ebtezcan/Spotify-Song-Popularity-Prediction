@@ -43,17 +43,18 @@ Due to a class imbalance problem, we additionally had to use SMOTENC on our data
 
 ## Results
 
-Below are the ranked results for our models:
+Below are the results for our models ranked by their recall scores in correctly predicting popular songs:
 
 | Model Type      | Recall Score  |
 | ------------- | -----:|
-| XGBoost | 0.66 |
+| XGBoost | 0.65 |
 | Logistic Regression| 0.65 |
-| Random Forest| 0.59 |
-| Dummy Classifier| 0.12 |
+| Random Forest| 0.60 |
+| Dummy Classifier| 0.51 |
+
 &nbsp;
 
-The best model we trained, XGBoost, performed 54% better compared to the dummy classifier at 66% correct prediction for a song being popular.
+The best model we trained, XGBoost, performed 14% better compared to the dummy classifier at 65% correct predictions for a song being popular.
 
 Aside from the models, we additionally explored different attributes within the popular songs and the unpopular songs separately.
 
@@ -69,7 +70,7 @@ Aside from the models, we additionally explored different attributes within the 
 
 <img src="images/genre-unpopular.jpg">
 
-> The most frequent genres of unpopular songs can be seen above. The results make sense as these genres tend to have a more niche fanbase or are not represented in the mainstream media. 
+> The most frequent genres of unpopular songs can be seen above. The results make sense as these genres tend to have a more niche fanbase or are not represented in the mainstream media as much as other genres. 
 
 &nbsp;
 ### Energy Scores of Songs by Popularity
@@ -106,7 +107,7 @@ In a competitive environment like the music streaming market, it is vital to ret
 
 One of the major limitations we faced during this project was computing power. All training and testing of ML models were completed on a dated quad-core CPU which caused long processing times (sometimes in excess of 4 hours). Due to the limited amount of time we had, we were unable to iterate on our gridsearches and optimize our models to potentially perform better. Additionally, these hardware limitations also caused processing times of SHAP explainers to be too long, which we then excluded from our notebook as they never finished running.
 
-In the future, instead of using pre-collected data from 2019, we would like to use more current data by utilizing the Spotify API to analyze current trends and build models.
+In the future, instead of using pre-collected data from 2019, we would like to use more current data for modelling by utilizing the Spotify API to analyze current trends.
 
 &nbsp;
 ## For More Information
