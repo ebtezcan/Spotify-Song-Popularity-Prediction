@@ -96,6 +96,8 @@ Aside from the models, we additionally explored different attributes within the 
 
 &nbsp;
 
+## Conclusions & Recommendations
+
 In a competitive environment like the music streaming market, it is vital to retain current subscribers and add new subscribers over time. By accurately predicting which song will be popular next, companies like Spotify can leverage this information to create better playlists and find and sign exclusivity deals with established and up-and-coming artists more easily.  To sum up, our analysis of approximately 176,000 songs from 2019 showed the following:
 
 - Popular songs tend to have Pop, Rap, Rock, Hip-Hop and Dance as their genres.
