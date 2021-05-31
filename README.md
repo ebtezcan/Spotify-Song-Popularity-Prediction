@@ -45,16 +45,16 @@ Due to a class imbalance problem, we additionally had to use SMOTENC on our data
 
 Below are the results for our models ranked by their recall scores in correctly predicting popular songs:
 
-| Model Type      | Recall Score  |
-| ------------- | -----:|
+| Model Type      | Recall Score
+| ------------- |-----:|
+| Logistic Regression| 0.66 |
 | XGBoost | 0.65 |
-| Logistic Regression| 0.65 |
 | Random Forest| 0.60 |
 | Dummy Classifier| 0.51 |
 
 &nbsp;
 
-The best model we trained, XGBoost, performed 14% better compared to the dummy classifier at 65% correct predictions for a song being popular.
+The best model we trained, Logistic Regression, performed 15% better compared to the dummy classifier at 66% correct predictions for a song being popular.
 
 Aside from the models, we additionally explored different attributes within the popular songs and the unpopular songs separately.
 
@@ -102,10 +102,22 @@ In a competitive environment like the music streaming market, it is vital to ret
 - More niche genres such as Children's Music, Comedy, Soundtracks, Classical and Jazz tend to be unpopular.
 - Generally, popular songs are higher energy, danceable, and therefore less acoustic.
 
+Our recommendations to Spotify for leveraging this information would be the following:
+
+- By identifying the next popular songs, Spotify can reach out to these artists and sign exclusivity deals with them to make their soon-to-be popular music available only on Spotify's platform. This would also help in identifying up-and-coming artists and may provide additional opportunities in the future.
+
+- Furthermore, Spotify can work with these artists on additional exclusive content such as song commentary or behind the scenes recordings.
+
+- Spotify can also curate even better playlists for their current subscribers by finding "fresh hits" ahead of the competition and use this to market the platform to new subscribers.
+
+We think that by utilizing our model and the insights we've highlighted, Spotify will stay competitive in the music streaming market for years to come.
+
 &nbsp;
 ## Limitations & Next Steps
 
-One of the major limitations we faced during this project was computing power. All training and testing of ML models were completed on a dated quad-core CPU which caused long processing times (sometimes in excess of 4 hours). Due to the limited amount of time we had, we were unable to iterate on our gridsearches and optimize our models to potentially perform better. Additionally, these hardware limitations also caused processing times of SHAP explainers to be too long, which we then excluded from our notebook as they never finished running.
+One of the major limitations we faced during this project was computing power. All training and testing of ML models were completed on a dated quad-core CPU which caused long processing times (sometimes in excess of 4 hours). Due to the limited amount of time we had, we were unable to iterate on our gridsearches and optimize our models to potentially perform better. 
+
+Additionally, all models seemed to be hitting a natural ceiling around 66% recall score. This suggests that maybe the type of data we had is simply not enough in fully explaining the popularity of songs. We saw that similar studies with even more data points had similar recall scores which supports this hypothesis. Refer to [Song Popularity Predictor by Mohamed Nasreldin.](https://towardsdatascience.com/song-popularity-predictor-1ef69735e380)
 
 In the future, instead of using pre-collected data from 2019, we would like to use more current data for modelling by utilizing the Spotify API to analyze current trends.
 
